@@ -1,0 +1,5 @@
+5.9
+cin>>ch : 遇到结束符（Space、Tab、Enter）就结束
+cin.get(ch) : cin.get()并不会舍弃Space，依然会将其读取进去，并加以显示等操作
+ch = cin.get() : 和cin.get(ch)等价
+
