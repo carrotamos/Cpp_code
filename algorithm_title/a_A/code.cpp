@@ -4,14 +4,15 @@
 using namespace std;
 char* my_change(char *pre);
 char* you_change(char *you_pre);
+const int size = 20;
 int main()
 {
-	char str[20];
-	char you_str[20];
+	char str[size];
+	char you_str[size];
 	cout<<"enter the str: ";
-	cin>>str;
+	cin.getline(str,size);
 	cout<<"enter you_str: ";
-	cin>>you_str;
+	cin.getline(you_str,size);
 	my_change(str);
 	you_change(you_str);
 	cout<<str<<endl;
@@ -29,7 +30,8 @@ char* my_change(char *pre)
 	{
 		if(pre[i]>= 'a' && pre[i]<= 'z')
 		{
-			pre[i] = pre[i]-32;
+		//	pre[i] = pre[i]-32;
+			pre[i] -= 'a' -'A';
 		}
 		else
 		{
